@@ -2,7 +2,17 @@
 # Bash Menu Script Example
 
 PS3='Please enter your choice: '
-options=("Option 1" "Option 2" "Option 3" "Quit")
+options=(1 "Show Firewall Rules"
+		 2 "Edit Before Firewall Rules"
+		 3 "Edit default Firewall Rules"
+		 4 "View running services only"
+		 5 "Check connection"
+		 6 "Reload services"
+		 7 "Show iptables for the NAT table"
+		 8 "Show iptables for the PREROUTING NAT table"
+		 9 "Show iptables for the POSTROUTING NAT table"
+		 10 "Show iptables for all tables"
+		 11 "Quit")
 select opt in "${options[@]}"
 do
     case $opt in
